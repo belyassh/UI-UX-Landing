@@ -6,14 +6,14 @@
 }
 
 :root {
-    --primary-color: #6366f1;
-    --secondary-color: #8b5cf6;
-    --accent-color: #ec4899;
+    --primary-color: #0066ff;
+    --secondary-color: #00bfff;
+    --accent-color: #00ffff;
     --text-primary: #ffffff;
     --text-secondary: rgba(255, 255, 255, 0.8);
-    --glass-bg: rgba(255, 255, 255, 0.1);
-    --glass-border: rgba(255, 255, 255, 0.2);
-    --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    --glass-bg: rgba(255, 255, 255, 0.15);
+    --glass-border: rgba(255, 255, 255, 0.3);
+    --shadow: 0 8px 32px 0 rgba(0, 100, 255, 0.25);
 }
 
 html {
@@ -23,7 +23,7 @@ html {
 body {
     font-family: 'Inter', sans-serif;
     color: var(--text-primary);
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 75%, #00f2fe 100%);
+    background: linear-gradient(135deg, #0066ff 0%, #1e90ff 25%, #00bfff 50%, #00d4ff 75%, #00ffff 100%);
     background-size: 400% 400%;
     animation: gradientShift 15s ease infinite;
     overflow-x: hidden;
@@ -58,7 +58,7 @@ body {
 .orb-1 {
     width: 500px;
     height: 500px;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: linear-gradient(135deg, #0066ff, #1e90ff);
     top: -200px;
     left: -200px;
     animation-delay: 0s;
@@ -67,7 +67,7 @@ body {
 .orb-2 {
     width: 400px;
     height: 400px;
-    background: linear-gradient(135deg, #f093fb, #f5576c);
+    background: linear-gradient(135deg, #00bfff, #1e90ff);
     bottom: -150px;
     right: -150px;
     animation-delay: 5s;
@@ -96,22 +96,22 @@ body {
 
 /* Glass Morphism Effect */
 .glass-card {
-    background: var(--glass-bg);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid var(--glass-border);
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: 20px;
-    box-shadow: var(--shadow);
+    box-shadow: 0 8px 32px 0 rgba(0, 100, 255, 0.2), inset 1px 1px 0 rgba(255, 255, 255, 0.2);
     transition: all 0.3s ease;
 }
 
 .glass-card-small {
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: 15px;
-    box-shadow: 0 4px 16px 0 rgba(31, 38, 135, 0.2);
+    box-shadow: 0 4px 16px 0 rgba(0, 100, 255, 0.2), inset 1px 1px 0 rgba(255, 255, 255, 0.15);
     transition: all 0.3s ease;
 }
 
@@ -132,12 +132,12 @@ body {
     width: 90%;
     max-width: 1200px;
     padding: 15px 30px;
-    background: var(--glass-bg);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid var(--glass-border);
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: 50px;
-    box-shadow: var(--shadow);
+    box-shadow: 0 8px 32px 0 rgba(0, 100, 255, 0.2), inset 1px 1px 0 rgba(255, 255, 255, 0.15);
     animation: slideDown 0.8s ease-out;
 }
 
