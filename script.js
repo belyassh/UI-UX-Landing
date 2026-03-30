@@ -39,21 +39,19 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Navbar background on scroll
-let lastScroll = 0;
 const navbar = document.querySelector('.glass-nav');
 
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
-    
-    if (currentScroll > 100) {
-        navbar.style.background = 'rgba(255, 255, 255, 0.15)';
-        navbar.style.boxShadow = '0 8px 32px 0 rgba(31, 38, 135, 0.5)';
-    } else {
-        navbar.style.background = 'rgba(255, 255, 255, 0.1)';
-        navbar.style.boxShadow = '0 8px 32px 0 rgba(31, 38, 135, 0.37)';
+
+    if (navbar) {
+        if (currentScroll > 100) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
     }
-    
-    lastScroll = currentScroll;
+
 });
 
 // Initialize EmailJS
