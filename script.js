@@ -2,80 +2,82 @@
 const translations = {
     ru: {
         navHome: 'Главная',
-        navAbout: 'Обо мне',
-        navPortfolio: 'Проекты',
-        navContact: 'Контакты',
+        navBenefits: 'Преимущества',
+        navFaq: 'FAQ',
+        navCta: 'Заявка',
         heroTitle1: 'Чистый',
         heroTitle2: 'Веб-дизайн',
         heroSubtitle: 'Проектирую визуально точные интерфейсы: современный стиль, логичная структура и аккуратные анимации.',
-        heroBtnWork: 'Смотреть проекты',
-        heroBtnTouch: 'Обсудить задачу',
-        aboutTitle: 'Обо мне',
-        aboutText1: 'Я веб-дизайнер, который фокусируется на чистом визуальном языке, удобстве и понятной структуре интерфейсов. Для меня важны детали: типографика, ритм отступов, читаемость и последовательность компонентов.',
-        aboutText2: 'В работе совмещаю дизайн и фронтенд-реализацию, чтобы итоговый сайт выглядел целостно, работал быстро и одинаково хорошо на мобильных устройствах и десктопе.',
-        designSkill: 'UI/UX Дизайн',
-        designDesc: 'Интерфейсы, ориентированные на пользователя',
-        codeSkill: 'Frontend',
-        codeDesc: 'Современная HTML/CSS/JS верстка',
-        animSkill: 'Анимации',
-        animDesc: 'Плавные и уместные микровзаимодействия',
-        respSkill: 'Адаптивность',
-        respDesc: 'Корректная работа на всех экранах',
-        portfolioTitle: 'Избранные проекты',
-        project1: 'Платформа e-commerce',
-        project1Desc: 'Система управления товарами и заказами',
-        project2: 'Веб-студия',
-        project2Desc: 'Сайт с портфолио и услугами',
-        project3: 'Маркетинговая платформа',
-        project3Desc: 'Управление кампаниями и аналитика',
-        project4: 'Приложение для управления',
-        project4Desc: 'Система отслеживания проектов и задач',
-        viewProject: 'Смотреть проект →',
-        contactTitle: 'Давайте работать вместе',
-        contactSubtitle: 'Есть идея проекта? Напишите, обсудим формат и сроки.',
+        heroBtnCta: 'Оставить заявку',
+        heroBtnLearnMore: 'Узнать больше',
+        benefitsTitle: 'Почему выбирают мою работу',
+        benefit1Title: 'UI/UX Дизайн',
+        benefit1Desc: 'Интерфейсы, ориентированные на пользователя, с фокусом на удобство и эстетику',
+        benefit2Title: 'Чистая верстка',
+        benefit2Desc: 'Современная HTML/CSS/JS реализация, оптимизированная под все браузеры',
+        benefit3Title: 'Гладкие анимации',
+        benefit3Desc: 'Плавные и уместные микровзаимодействия, которые улучшают UX',
+        benefit4Title: 'Адаптивный дизайн',
+        benefit4Desc: 'Корректная работа на всех экранах — от мобильных до десктопов',
+        faqTitle: 'Часто задаваемые вопросы',
+        faq1Q: 'Как долго обычно занимает проект?',
+        faq1A: 'Сроки зависят от сложности задачи. Простой сайт — 2-3 недели, сложный проект — 4-8 недель. На первой встрече мы обсудим детали и согласуем точные сроки.',
+        faq2Q: 'Какие технологии вы используете?',
+        faq2A: 'Я работаю с современным стеком: HTML5, CSS3, JavaScript, Vue.js/React. Для дизайна использую Figma. Все проекты оптимизированы под производительность и SEO.',
+        faq3Q: 'Предоставляете ли вы поддержку после запуска?',
+        faq3A: 'Да, я предлагаю пакеты поддержки. После запуска даю 2 недели бесплатной правки. Затем возможна поддержка на условиях, которые мы обсудим заранее.',
+        faq4Q: 'Во сколько обойдется проект?',
+        faq4A: 'Стоимость зависит от объема работы. Минимальная цена за проект — $1500. Для точной оценки нужно обсудить требования. Предлагаю бесплатную консультацию.',
+        faq5Q: 'Как организован процесс работы?',
+        faq5A: 'Процесс: 1. Консультация — обсуждение целей. 2. Дизайн — прототипы в Figma. 3. Разработка — верстка и программирование. 4. Тестирование и правки. 5. Запуск и поддержка.',
+        faq6Q: 'Жду ответа. Как быстро вы отвечаете?',
+        faq6A: 'Я отвечаю на письма в течение 24 часов в рабочие дни. Сложные вопросы обсуждаю на первой встрече. Прошу быть терпеливым — качество работы для меня важнее скорости ответа.',
+        ctaTitle: 'Готовы начать проект?',
+        ctaSubtitle: 'Заполните простую форму, и я свяжусь с вами в течение 24 часов',
         inputName: 'Ваше имя',
         inputEmail: 'Ваш email',
-        inputMessage: 'Коротко опишите задачу',
-        submitBtn: 'Отправить сообщение',
+        inputMessage: 'Коротко опишите вашу идею проекта',
+        submitBtn: 'Отправить заявку',
         footerText: '© 2026 Портфолио веб-дизайнера. Все права защищены.'
     },
     en: {
         navHome: 'Home',
-        navAbout: 'About',
-        navPortfolio: 'Portfolio',
-        navContact: 'Contact',
+        navBenefits: 'Benefits',
+        navFaq: 'FAQ',
+        navCta: 'Request',
         heroTitle1: 'Creative',
         heroTitle2: 'Web Designer',
         heroSubtitle: 'Crafting beautiful digital experiences with modern design & smooth animations',
-        heroBtnWork: 'View Work',
-        heroBtnTouch: 'Get In Touch',
-        aboutTitle: 'About Me',
-        aboutText1: 'I\'m a passionate web designer specializing in creating stunning, user-friendly interfaces that blend aesthetics with functionality. With a keen eye for detail and a love for modern design trends, I transform ideas into beautiful digital experiences.',
-        aboutText2: 'My approach combines clean design principles, smooth animations, and cutting-edge web technologies to deliver websites that not only look great but perform exceptionally.',
-        designSkill: 'UI/UX Design',
-        designDesc: 'User-centered design thinking',
-        codeSkill: 'Frontend Dev',
-        codeDesc: 'Modern web technologies',
-        animSkill: 'Animations',
-        animDesc: 'Smooth, engaging interactions',
-        respSkill: 'Responsive',
-        respDesc: 'Mobile-first approach',
-        portfolioTitle: 'Featured Work',
-        project1: 'E-Commerce Platform',
-        project1Desc: 'Modern shopping experience',
-        project2: 'Creative Agency',
-        project2Desc: 'Bold & innovative design',
-        project3: 'Tech Startup',
-        project3Desc: 'Clean & professional',
-        project4: 'Portfolio Website',
-        project4Desc: 'Elegant showcase',
-        viewProject: 'View Project →',
-        contactTitle: 'Let\'s Work Together',
-        contactSubtitle: 'Have a project in mind? I\'d love to hear about it.',
+        heroBtnCta: 'Get Started',
+        heroBtnLearnMore: 'Learn More',
+        benefitsTitle: 'Why Choose My Work',
+        benefit1Title: 'UI/UX Design',
+        benefit1Desc: 'User-centered interfaces focused on usability and aesthetics',
+        benefit2Title: 'Clean Code',
+        benefit2Desc: 'Modern HTML/CSS/JS implementation optimized for all browsers',
+        benefit3Title: 'Smooth Animations',
+        benefit3Desc: 'Fluid, purposeful interactions that enhance the user experience',
+        benefit4Title: 'Responsive Design',
+        benefit4Desc: 'Perfect rendering from mobile devices to desktop screens',
+        faqTitle: 'Frequently Asked Questions',
+        faq1Q: 'How long does a project usually take?',
+        faq1A: 'Timeline depends on complexity. A simple website takes 2-3 weeks, complex projects take 4-8 weeks. We\'ll discuss details and agree on exact timing during our first meeting.',
+        faq2Q: 'What technologies do you use?',
+        faq2A: 'I work with modern stack: HTML5, CSS3, JavaScript, Vue.js/React. For design, I use Figma. All projects are optimized for performance and SEO.',
+        faq3Q: 'Do you offer support after launch?',
+        faq3A: 'Yes, I offer support packages. After launch, I provide 2 weeks of free revisions. Further support is available on terms we discuss beforehand.',
+        faq4Q: 'How much does a project cost?',
+        faq4A: 'Pricing depends on the scope of work. Starting price is $1500 per project. For accurate estimate, let\'s discuss your requirements. I offer a free consultation.',
+        faq5Q: 'How is the work process organized?',
+        faq5A: 'Process: 1. Consultation — discuss goals. 2. Design — create Figma prototypes. 3. Development — code and program. 4. Testing and revisions. 5. Launch and support.',
+        faq6Q: 'Waiting for your reply. How quickly do you respond?',
+        faq6A: 'I respond to emails within 24 hours on business days. Complex questions are discussed at our first meeting. I prioritize quality over speed.',
+        ctaTitle: 'Ready to Start a Project?',
+        ctaSubtitle: 'Fill out a simple form, and I\'ll get back to you within 24 hours',
         inputName: 'Your Name',
         inputEmail: 'Your Email',
-        inputMessage: 'Your Message',
-        submitBtn: 'Send Message',
+        inputMessage: 'Describe your project idea',
+        submitBtn: 'Submit Request',
         footerText: '© 2024 Web Designer Portfolio. All rights reserved.'
     }
 };
@@ -83,59 +85,80 @@ const translations = {
 // Function to update page language
 function switchLanguage(lang) {
     // Navigation
-    document.querySelectorAll('.nav-links a')[0].textContent = translations[lang].navHome;
-    document.querySelectorAll('.nav-links a')[1].textContent = translations[lang].navAbout;
-    document.querySelectorAll('.nav-links a')[2].textContent = translations[lang].navPortfolio;
-    document.querySelectorAll('.nav-links a')[3].textContent = translations[lang].navContact;
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navLinks[0].textContent = translations[lang].navHome;
+    navLinks[1].textContent = translations[lang].navBenefits;
+    navLinks[2].textContent = translations[lang].navFaq;
+    navLinks[3].textContent = translations[lang].navCta;
 
     // Hero Section
     const titleLines = document.querySelectorAll('.title-line');
     titleLines[0].textContent = translations[lang].heroTitle1;
     titleLines[1].textContent = translations[lang].heroTitle2;
     document.querySelector('.hero-subtitle').textContent = translations[lang].heroSubtitle;
-    document.querySelectorAll('.hero-buttons .btn')[0].textContent = translations[lang].heroBtnWork;
-    document.querySelectorAll('.hero-buttons .btn')[1].textContent = translations[lang].heroBtnTouch;
+    document.querySelectorAll('.hero-buttons .btn')[0].textContent = translations[lang].heroBtnCta;
+    document.querySelectorAll('.hero-buttons .btn')[1].textContent = translations[lang].heroBtnLearnMore;
 
-    // About Section
-    document.querySelector('.about-card .section-title').textContent = translations[lang].aboutTitle;
-    const aboutTexts = document.querySelectorAll('.about-text p');
-    aboutTexts[0].textContent = translations[lang].aboutText1;
-    aboutTexts[1].textContent = translations[lang].aboutText2;
+    // Benefits Section
+    document.querySelector('.benefits-title').textContent = translations[lang].benefitsTitle;
+    const benefitCards = document.querySelectorAll('.benefit-card');
+    benefitCards[0].querySelector('h3').textContent = translations[lang].benefit1Title;
+    benefitCards[0].querySelector('p').textContent = translations[lang].benefit1Desc;
+    benefitCards[1].querySelector('h3').textContent = translations[lang].benefit2Title;
+    benefitCards[1].querySelector('p').textContent = translations[lang].benefit2Desc;
+    benefitCards[2].querySelector('h3').textContent = translations[lang].benefit3Title;
+    benefitCards[2].querySelector('p').textContent = translations[lang].benefit3Desc;
+    benefitCards[3].querySelector('h3').textContent = translations[lang].benefit4Title;
+    benefitCards[3].querySelector('p').textContent = translations[lang].benefit4Desc;
 
-    // Skills
-    const skillItems = document.querySelectorAll('.skill-item');
-    skillItems[0].querySelector('h3').textContent = translations[lang].designSkill;
-    skillItems[0].querySelector('p').textContent = translations[lang].designDesc;
-    skillItems[1].querySelector('h3').textContent = translations[lang].codeSkill;
-    skillItems[1].querySelector('p').textContent = translations[lang].codeDesc;
-    skillItems[2].querySelector('h3').textContent = translations[lang].animSkill;
-    skillItems[2].querySelector('p').textContent = translations[lang].animDesc;
-    skillItems[3].querySelector('h3').textContent = translations[lang].respSkill;
-    skillItems[3].querySelector('p').textContent = translations[lang].respDesc;
+    // FAQ Section
+    const faqTitle = document.querySelector('.faq .section-title');
+    if (faqTitle) faqTitle.textContent = translations[lang].faqTitle;
 
-    // Portfolio Section
-    document.querySelector('.portfolio .section-title').textContent = translations[lang].portfolioTitle;
-    const portfolioItems = document.querySelectorAll('.portfolio-overlay');
-    portfolioItems[0].querySelector('h3').textContent = translations[lang].project1;
-    portfolioItems[0].querySelector('p').textContent = translations[lang].project1Desc;
-    portfolioItems[0].querySelector('a').textContent = translations[lang].viewProject;
-    portfolioItems[1].querySelector('h3').textContent = translations[lang].project2;
-    portfolioItems[1].querySelector('p').textContent = translations[lang].project2Desc;
-    portfolioItems[1].querySelector('a').textContent = translations[lang].viewProject;
-    portfolioItems[2].querySelector('h3').textContent = translations[lang].project3;
-    portfolioItems[2].querySelector('p').textContent = translations[lang].project3Desc;
-    portfolioItems[2].querySelector('a').textContent = translations[lang].viewProject;
-    portfolioItems[3].querySelector('h3').textContent = translations[lang].project4;
-    portfolioItems[3].querySelector('p').textContent = translations[lang].project4Desc;
-    portfolioItems[3].querySelector('a').textContent = translations[lang].viewProject;
+    const faqItems = document.querySelectorAll('.faq-item');
+    if (faqItems.length > 0) {
+        faqItems[0].querySelector('h3').textContent = translations[lang].faq1Q;
+        faqItems[0].querySelector('.faq-content p').textContent = translations[lang].faq1A;
+    }
+    if (faqItems.length > 1) {
+        faqItems[1].querySelector('h3').textContent = translations[lang].faq2Q;
+        faqItems[1].querySelector('.faq-content p').textContent = translations[lang].faq2A;
+    }
+    if (faqItems.length > 2) {
+        faqItems[2].querySelector('h3').textContent = translations[lang].faq3Q;
+        faqItems[2].querySelector('.faq-content p').textContent = translations[lang].faq3A;
+    }
+    if (faqItems.length > 3) {
+        faqItems[3].querySelector('h3').textContent = translations[lang].faq4Q;
+        faqItems[3].querySelector('.faq-content p').textContent = translations[lang].faq4A;
+    }
+    if (faqItems.length > 4) {
+        faqItems[4].querySelector('h3').textContent = translations[lang].faq5Q;
+        faqItems[4].querySelector('.faq-content p').textContent = translations[lang].faq5A;
+    }
+    if (faqItems.length > 5) {
+        faqItems[5].querySelector('h3').textContent = translations[lang].faq6Q;
+        faqItems[5].querySelector('.faq-content p').textContent = translations[lang].faq6A;
+    }
 
-    // Contact Section
-    document.querySelector('.contact-card .section-title').textContent = translations[lang].contactTitle;
-    document.querySelector('.contact-subtitle').textContent = translations[lang].contactSubtitle;
-    document.querySelectorAll('.glass-input')[0].placeholder = translations[lang].inputName;
-    document.querySelectorAll('.glass-input')[1].placeholder = translations[lang].inputEmail;
-    document.querySelectorAll('.glass-input')[2].placeholder = translations[lang].inputMessage;
-    document.querySelector('.contact-form .btn').textContent = translations[lang].submitBtn;
+    // CTA Section
+    const ctaCard = document.querySelector('.cta-card');
+    if (ctaCard) {
+        ctaCard.querySelector('.section-title').textContent = translations[lang].ctaTitle;
+        ctaCard.querySelector('.cta-subtitle').textContent = translations[lang].ctaSubtitle;
+    }
+
+    // Form inputs
+    const formInputs = document.querySelectorAll('.glass-input');
+    if (formInputs.length > 0) formInputs[0].placeholder = translations[lang].inputName;
+    if (formInputs.length > 1) formInputs[1].placeholder = translations[lang].inputEmail;
+    if (formInputs.length > 2) formInputs[2].placeholder = translations[lang].inputMessage;
+
+    // Submit buttons
+    const submitButtons = document.querySelectorAll('.contact-form .btn');
+    submitButtons.forEach(btn => {
+        btn.textContent = translations[lang].submitBtn;
+    });
 
     // Footer
     document.querySelector('.footer p').textContent = translations[lang].footerText;
@@ -195,6 +218,31 @@ document.addEventListener('DOMContentLoaded', () => {
     drawerLinks.forEach(link => {
         link.addEventListener('click', () => {
             closeDrawer();
+        });
+    });
+
+    // FAQ toggle functionality
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const header = item.querySelector('.faq-header');
+        const content = item.querySelector('.faq-content');
+        const toggle = item.querySelector('.faq-toggle');
+
+        header.addEventListener('click', () => {
+            const isOpen = item.classList.contains('open');
+            
+            // Close all other items
+            faqItems.forEach(otherItem => {
+                otherItem.classList.remove('open');
+                const otherToggle = otherItem.querySelector('.faq-toggle');
+                if (otherToggle) otherToggle.textContent = '+';
+            });
+
+            // Toggle current item
+            if (!isOpen) {
+                item.classList.add('open');
+                if (toggle) toggle.textContent = '−';
+            }
         });
     });
 });

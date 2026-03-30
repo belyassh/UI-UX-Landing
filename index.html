@@ -25,9 +25,9 @@
             </div>
             <ul class="nav-links">
                 <li><a href="#home">Главная</a></li>
-                <li><a href="#about">Обо мне</a></li>
-                <li><a href="#portfolio">Проекты</a></li>
-                <li><a href="#contact">Контакты</a></li>
+                <li><a href="#benefits">Преимущества</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#cta">Заявка</a></li>
             </ul>
             <button class="hamburger" aria-label="Меню">
                 <span></span>
@@ -46,9 +46,9 @@
         </button>
         <ul class="drawer-links">
             <li><a href="#home">Главная</a></li>
-            <li><a href="#about">Обо мне</a></li>
-            <li><a href="#portfolio">Проекты</a></li>
-            <li><a href="#contact">Контакты</a></li>
+            <li><a href="#benefits">Преимущества</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#cta">Заявка</a></li>
         </ul>
     </div>
 
@@ -62,8 +62,8 @@
                 </h1>
                 <p class="hero-subtitle">Проектирую визуально точные интерфейсы: современный стиль, логичная структура и аккуратные анимации.</p>
                 <div class="hero-buttons">
-                    <a href="#portfolio" class="btn btn-primary">Смотреть проекты</a>
-                    <a href="#contact" class="btn btn-secondary">Обсудить задачу</a>
+                    <a href="#cta" class="btn btn-primary">Оставить заявку</a>
+                    <a href="#benefits" class="btn btn-secondary">Узнать больше</a>
                 </div>
             </div>
         </div>
@@ -72,94 +72,109 @@
         </div>
     </section>
 
-    <!-- about -->
-    <section id="about" class="about">
+    <!-- Benefits Section -->
+    <section id="benefits" class="benefits">
         <div class="container">
-            <div class="glass-card about-card">
-                <h2 class="section-title">Обо мне</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>Я веб-дизайнер, который фокусируется на чистом визуальном языке, удобстве и понятной структуре интерфейсов. Для меня важны детали: типографика, ритм отступов, читаемость и последовательность компонентов.</p>
-                        <p>В работе совмещаю дизайн и фронтенд-реализацию, чтобы итоговый сайт выглядел целостно, работал быстро и одинаково хорошо на мобильных устройствах и десктопе.</p>
+            <h2 class="section-title benefits-title">Почему выбирают мою работу</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card glass-card">
+                    <div class="benefit-icon"></div>
+                    <h3>UI/UX Дизайн</h3>
+                    <p>Интерфейсы, ориентированные на пользователя, с фокусом на удобство и эстетику</p>
+                </div>
+                <div class="benefit-card glass-card">
+                    <div class="benefit-icon"></div>
+                    <h3>Чистая верстка</h3>
+                    <p>Современная HTML/CSS/JS реализация, оптимизированная под все браузеры</p>
+                </div>
+                <div class="benefit-card glass-card">
+                    <div class="benefit-icon"></div>
+                    <h3>Гладкие анимации</h3>
+                    <p>Плавные и уместные микровзаимодействия, которые улучшают UX</p>
+                </div>
+                <div class="benefit-card glass-card">
+                    <div class="benefit-icon"></div>
+                    <h3>Адаптивный дизайн</h3>
+                    <p>Корректная работа на всех экранах — от мобильных до десктопов</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2 class="section-title">Часто задаваемые вопросы</h2>
+            <div class="faq-container">
+                <div class="faq-item glass-card">
+                    <button class="faq-header">
+                        <h3>Как долго обычно занимает проект?</h3>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-content">
+                        <p>Сроки зависят от сложности задачи. Простой сайт — 2-3 недели, сложный проект — 4-8 недель. На первой встрече мы обсудим детали и согласуем точные сроки.</p>
                     </div>
-                    <div class="skills-grid">
-                        <div class="skill-item glass-card-small">
-                            <div class="skill-badge design"></div>
-                            <h3>UI/UX Дизайн</h3>
-                            <p>Интерфейсы, ориентированные на пользователя</p>
-                        </div>
-                        <div class="skill-item glass-card-small">
-                            <div class="skill-badge code"></div>
-                            <h3>Frontend</h3>
-                            <p>Современная HTML/CSS/JS верстка</p>
-                        </div>
-                        <div class="skill-item glass-card-small">
-                            <div class="skill-badge animation"></div>
-                            <h3>Анимации</h3>
-                            <p>Плавные и уместные микровзаимодействия</p>
-                        </div>
-                        <div class="skill-item glass-card-small">
-                            <div class="skill-badge responsive"></div>
-                            <h3>Адаптивность</h3>
-                            <p>Корректная работа на всех экранах</p>
-                        </div>
+                </div>
+
+                <div class="faq-item glass-card">
+                    <button class="faq-header">
+                        <h3>Какие технологии вы используете?</h3>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-content">
+                        <p>Я работаю с современным стеком: HTML5, CSS3, JavaScript, Vue.js/React. Для дизайна использую Figma. Все проекты оптимизированы под производительность и SEO.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item glass-card">
+                    <button class="faq-header">
+                        <h3>Предоставляете ли вы поддержку после запуска?</h3>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-content">
+                        <p>Да, я предлагаю пакеты поддержки. После запуска даю 2 недели бесплатной правки. Затем возможна поддержка на условиях, которые мы обсудим заранее.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item glass-card">
+                    <button class="faq-header">
+                        <h3>Во сколько обойдется проект?</h3>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-content">
+                        <p>Стоимость зависит от объема работы. Минимальная цена за проект — $1500. Для точной оценки нужно обсудить требования. Предлагаю бесплатную консультацию.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item glass-card">
+                    <button class="faq-header">
+                        <h3>Как организован процесс работы?</h3>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-content">
+                        <p>Процесс: 1. Консультация — обсуждение целей. 2. Дизайн — прототипы в Figma. 3. Разработка — верстка и программирование. 4. Тестирование и правки. 5. Запуск и поддержка.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item glass-card">
+                    <button class="faq-header">
+                        <h3>Жду ответа. Как быстро вы отвечаете?</h3>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-content">
+                        <p>Я отвечаю на письма в течение 24 часов в рабочие дни. Сложные вопросы обсуждаю на первой встрече. Прошу быть терпеливым — качество работы для меня важнее скорости ответа.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
+    <!-- CTA Section -->
+    <section id="cta" class="cta">
         <div class="container">
-            <h2 class="section-title">Избранные проекты</h2>
-            <div class="portfolio-grid">
-                <div class="portfolio-item glass-card">
-                    <div class="portfolio-image">
-                        <div class="portfolio-overlay">
-                            <h3>Платформа e-commerce</h3>
-                            <p>Система управления товарами и заказами</p>
-                            <a href="#" class="portfolio-link">Смотреть проект →</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item glass-card">
-                    <div class="portfolio-image">
-                        <div class="portfolio-overlay">
-                            <h3>Веб-студия</h3>
-                            <p>Сайт с портфолио и услугами</p>
-                            <a href="#" class="portfolio-link">Смотреть проект →</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item glass-card">
-                    <div class="portfolio-image">
-                        <div class="portfolio-overlay">
-                            <h3>Маркетинговая платформа</h3>
-                            <p>Управление кампаниями и аналитика</p>
-                            <a href="#" class="portfolio-link">Смотреть проект →</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item glass-card">
-                    <div class="portfolio-image">
-                        <div class="portfolio-overlay">
-                            <h3>Приложение для управления</h3>
-                            <p>Система отслеживания проектов и задач</p>
-                            <a href="#" class="portfolio-link">Смотреть проект →</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="glass-card contact-card">
-                <h2 class="section-title">Давайте работать вместе</h2>
-                <p class="contact-subtitle">Есть идея проекта? Напишите, обсудим формат и сроки.</p>
+            <div class="glass-card cta-card">
+                <h2 class="section-title">Готовы начать проект?</h2>
+                <p class="cta-subtitle">Заполните простую форму, и я свяжусь с вами в течение 24 часов</p>
                 <form class="contact-form">
                     <div class="form-group">
                         <input type="text" class="glass-input" placeholder="Ваше имя" required>
@@ -168,16 +183,10 @@
                         <input type="email" class="glass-input" placeholder="Ваш email" required>
                     </div>
                     <div class="form-group">
-                        <textarea class="glass-input" rows="5" placeholder="Коротко опишите задачу" required></textarea>
+                        <textarea class="glass-input" rows="5" placeholder="Коротко опишите вашу идею проекта" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Отправить сообщение</button>
+                    <button type="submit" class="btn btn-primary">Отправить заявку</button>
                 </form>
-                <div class="social-links">
-                    <a href="#" class="social-link glass-card-small">LinkedIn</a>
-                    <a href="#" class="social-link glass-card-small">Dribbble</a>
-                    <a href="#" class="social-link glass-card-small">Behance</a>
-                    <a href="https://github.com/belyassh" class="social-link glass-card-small">GitHub</a>
-                </div>
             </div>
         </div>
     </section>
