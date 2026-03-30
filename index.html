@@ -10,14 +10,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Merriweather:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Animated Background -->
+    <!-- background -->
     <div class="background">
         <div class="gradient-orb orb-1"></div>
         <div class="gradient-orb orb-2"></div>
         <div class="gradient-orb orb-3"></div>
     </div>
 
-    <!-- Navigation -->
+    <!-- navigation -->
     <nav class="glass-nav">
         <div class="nav-container">
             <div class="logo">
@@ -29,21 +29,30 @@
                 <li><a href="#portfolio">Проекты</a></li>
                 <li><a href="#contact">Контакты</a></li>
             </ul>
-            <div class="nav-right">
-                <div class="lang-switcher">
-                    <button class="lang-btn active" data-lang="ru">РУ</button>
-                    <button class="lang-btn" data-lang="en">EN</button>
-                </div>
-                <button class="hamburger" aria-label="Меню">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
+            <button class="hamburger" aria-label="Меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Mobile drawer menu -->
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+    <div class="drawer-menu">
+        <button class="drawer-close" aria-label="Закрыть меню">
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="drawer-links">
+            <li><a href="#home">Главная</a></li>
+            <li><a href="#about">Обо мне</a></li>
+            <li><a href="#portfolio">Проекты</a></li>
+            <li><a href="#contact">Контакты</a></li>
+        </ul>
+    </div>
+
+    <!-- hero -->
     <section id="home" class="hero">
         <div class="hero-content">
             <div class="glass-card hero-card">
@@ -63,7 +72,7 @@
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- about -->
     <section id="about" class="about">
         <div class="container">
             <div class="glass-card about-card">

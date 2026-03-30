@@ -144,54 +144,59 @@ function switchLanguage(lang) {
     document.documentElement.lang = lang;
 }
 
-// Language switcher
+// Initialize language on page load
 document.addEventListener('DOMContentLoaded', () => {
-    const langButtons = document.querySelectorAll('.lang-btn');
-    
-    langButtons.forEach(btn => {
-        btn.addEventListener('click', function() {
-            const lang = this.getAttribute('data-lang');
-            
-            // Update active state
-            langButtons.forEach(b => b.classList.remove('active'));
-            this.classList.add('active');
-            
-            // Switch language
-            switchLanguage(lang);
-            
-            // Store preference
-            localStorage.setItem('preferred-lang', lang);
+    // Set initial language to Russian
+    switchLanguage('ru');
+
+    // Drawer menu logic
+    const hamburger = document.querySelector('.hamburger');
+    const drawer = document.querySelector('.drawer-menu');
+    const overlay = document.querySelector('#drawerOverlay');
+    const drawerClose = document.querySelector('.drawer-close');
+    const drawerLinks = document.querySelectorAll('.drawer-links a');
+
+    function closeDrawer() {
+        drawer.classList.remove('active');
+        overlay.classList.remove('active');
+        hamburger.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+
+    function openDrawer() {
+        drawer.classList.add('active');
+        overlay.classList.add('active');
+        hamburger.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    // Open drawer on hamburger click
+    if (hamburger) {
+        hamburger.addEventListener('click', () => {
+            if (drawer.classList.contains('active')) {
+                closeDrawer();
+            } else {
+                openDrawer();
+            }
+        });
+    }
+
+    // Close drawer on overlay click
+    if (overlay) {
+        overlay.addEventListener('click', closeDrawer);
+    }
+
+    // Close drawer on close button click
+    if (drawerClose) {
+        drawerClose.addEventListener('click', closeDrawer);
+    }
+
+    // Close drawer when clicking on a link
+    drawerLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            closeDrawer();
         });
     });
-    
-    // Restore user preference and apply language
-    const savedLang = localStorage.getItem('preferred-lang') || 'ru';
-    const savedBtn = document.querySelector(`.lang-btn[data-lang="${savedLang}"]`);
-    if (savedBtn) {
-        savedBtn.classList.add('active');
-        switchLanguage(savedLang);
-    } else {
-        switchLanguage('ru');
-    }
-
-    // Hamburger menu
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
-    
-    if (hamburger && navLinks) {
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navLinks.classList.toggle('active');
-        });
-
-        // Close menu when clicking on a link
-        navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                navLinks.classList.remove('active');
-            });
-        });
-    }
 });
 
 // Smooth scroll behavior for navigation links
