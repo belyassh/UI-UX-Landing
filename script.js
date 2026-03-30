@@ -1,3 +1,149 @@
+// Translation system
+const translations = {
+    ru: {
+        navHome: 'Главная',
+        navAbout: 'Обо мне',
+        navPortfolio: 'Проекты',
+        navContact: 'Контакты',
+        heroTitle1: 'Чистый',
+        heroTitle2: 'Веб-дизайн',
+        heroSubtitle: 'Проектирую визуально точные интерфейсы: современный стиль, логичная структура и аккуратные анимации.',
+        heroBtnWork: 'Смотреть проекты',
+        heroBtnTouch: 'Обсудить задачу',
+        aboutTitle: 'Обо мне',
+        aboutText1: 'Я веб-дизайнер, который фокусируется на чистом визуальном языке, удобстве и понятной структуре интерфейсов. Для меня важны детали: типографика, ритм отступов, читаемость и последовательность компонентов.',
+        aboutText2: 'В работе совмещаю дизайн и фронтенд-реализацию, чтобы итоговый сайт выглядел целостно, работал быстро и одинаково хорошо на мобильных устройствах и десктопе.',
+        designSkill: 'UI/UX Дизайн',
+        designDesc: 'Интерфейсы, ориентированные на пользователя',
+        codeSkill: 'Frontend',
+        codeDesc: 'Современная HTML/CSS/JS верстка',
+        animSkill: 'Анимации',
+        animDesc: 'Плавные и уместные микровзаимодействия',
+        respSkill: 'Адаптивность',
+        respDesc: 'Корректная работа на всех экранах',
+        portfolioTitle: 'Избранные проекты',
+        project1: 'Платформа e-commerce',
+        project1Desc: 'Система управления товарами и заказами',
+        project2: 'Веб-студия',
+        project2Desc: 'Сайт с портфолио и услугами',
+        project3: 'Маркетинговая платформа',
+        project3Desc: 'Управление кампаниями и аналитика',
+        project4: 'Приложение для управления',
+        project4Desc: 'Система отслеживания проектов и задач',
+        viewProject: 'Смотреть проект →',
+        contactTitle: 'Давайте работать вместе',
+        contactSubtitle: 'Есть идея проекта? Напишите, обсудим формат и сроки.',
+        inputName: 'Ваше имя',
+        inputEmail: 'Ваш email',
+        inputMessage: 'Коротко опишите задачу',
+        submitBtn: 'Отправить сообщение',
+        footerText: '© 2026 Портфолио веб-дизайнера. Все права защищены.'
+    },
+    en: {
+        navHome: 'Home',
+        navAbout: 'About',
+        navPortfolio: 'Portfolio',
+        navContact: 'Contact',
+        heroTitle1: 'Creative',
+        heroTitle2: 'Web Designer',
+        heroSubtitle: 'Crafting beautiful digital experiences with modern design & smooth animations',
+        heroBtnWork: 'View Work',
+        heroBtnTouch: 'Get In Touch',
+        aboutTitle: 'About Me',
+        aboutText1: 'I\'m a passionate web designer specializing in creating stunning, user-friendly interfaces that blend aesthetics with functionality. With a keen eye for detail and a love for modern design trends, I transform ideas into beautiful digital experiences.',
+        aboutText2: 'My approach combines clean design principles, smooth animations, and cutting-edge web technologies to deliver websites that not only look great but perform exceptionally.',
+        designSkill: 'UI/UX Design',
+        designDesc: 'User-centered design thinking',
+        codeSkill: 'Frontend Dev',
+        codeDesc: 'Modern web technologies',
+        animSkill: 'Animations',
+        animDesc: 'Smooth, engaging interactions',
+        respSkill: 'Responsive',
+        respDesc: 'Mobile-first approach',
+        portfolioTitle: 'Featured Work',
+        project1: 'E-Commerce Platform',
+        project1Desc: 'Modern shopping experience',
+        project2: 'Creative Agency',
+        project2Desc: 'Bold & innovative design',
+        project3: 'Tech Startup',
+        project3Desc: 'Clean & professional',
+        project4: 'Portfolio Website',
+        project4Desc: 'Elegant showcase',
+        viewProject: 'View Project →',
+        contactTitle: 'Let\'s Work Together',
+        contactSubtitle: 'Have a project in mind? I\'d love to hear about it.',
+        inputName: 'Your Name',
+        inputEmail: 'Your Email',
+        inputMessage: 'Your Message',
+        submitBtn: 'Send Message',
+        footerText: '© 2024 Web Designer Portfolio. All rights reserved.'
+    }
+};
+
+// Function to update page language
+function switchLanguage(lang) {
+    // Navigation
+    document.querySelectorAll('.nav-links a')[0].textContent = translations[lang].navHome;
+    document.querySelectorAll('.nav-links a')[1].textContent = translations[lang].navAbout;
+    document.querySelectorAll('.nav-links a')[2].textContent = translations[lang].navPortfolio;
+    document.querySelectorAll('.nav-links a')[3].textContent = translations[lang].navContact;
+
+    // Hero Section
+    const titleLines = document.querySelectorAll('.title-line');
+    titleLines[0].textContent = translations[lang].heroTitle1;
+    titleLines[1].textContent = translations[lang].heroTitle2;
+    document.querySelector('.hero-subtitle').textContent = translations[lang].heroSubtitle;
+    document.querySelectorAll('.hero-buttons .btn')[0].textContent = translations[lang].heroBtnWork;
+    document.querySelectorAll('.hero-buttons .btn')[1].textContent = translations[lang].heroBtnTouch;
+
+    // About Section
+    document.querySelector('.about-card .section-title').textContent = translations[lang].aboutTitle;
+    const aboutTexts = document.querySelectorAll('.about-text p');
+    aboutTexts[0].textContent = translations[lang].aboutText1;
+    aboutTexts[1].textContent = translations[lang].aboutText2;
+
+    // Skills
+    const skillItems = document.querySelectorAll('.skill-item');
+    skillItems[0].querySelector('h3').textContent = translations[lang].designSkill;
+    skillItems[0].querySelector('p').textContent = translations[lang].designDesc;
+    skillItems[1].querySelector('h3').textContent = translations[lang].codeSkill;
+    skillItems[1].querySelector('p').textContent = translations[lang].codeDesc;
+    skillItems[2].querySelector('h3').textContent = translations[lang].animSkill;
+    skillItems[2].querySelector('p').textContent = translations[lang].animDesc;
+    skillItems[3].querySelector('h3').textContent = translations[lang].respSkill;
+    skillItems[3].querySelector('p').textContent = translations[lang].respDesc;
+
+    // Portfolio Section
+    document.querySelector('.portfolio .section-title').textContent = translations[lang].portfolioTitle;
+    const portfolioItems = document.querySelectorAll('.portfolio-overlay');
+    portfolioItems[0].querySelector('h3').textContent = translations[lang].project1;
+    portfolioItems[0].querySelector('p').textContent = translations[lang].project1Desc;
+    portfolioItems[0].querySelector('a').textContent = translations[lang].viewProject;
+    portfolioItems[1].querySelector('h3').textContent = translations[lang].project2;
+    portfolioItems[1].querySelector('p').textContent = translations[lang].project2Desc;
+    portfolioItems[1].querySelector('a').textContent = translations[lang].viewProject;
+    portfolioItems[2].querySelector('h3').textContent = translations[lang].project3;
+    portfolioItems[2].querySelector('p').textContent = translations[lang].project3Desc;
+    portfolioItems[2].querySelector('a').textContent = translations[lang].viewProject;
+    portfolioItems[3].querySelector('h3').textContent = translations[lang].project4;
+    portfolioItems[3].querySelector('p').textContent = translations[lang].project4Desc;
+    portfolioItems[3].querySelector('a').textContent = translations[lang].viewProject;
+
+    // Contact Section
+    document.querySelector('.contact-card .section-title').textContent = translations[lang].contactTitle;
+    document.querySelector('.contact-subtitle').textContent = translations[lang].contactSubtitle;
+    document.querySelectorAll('.glass-input')[0].placeholder = translations[lang].inputName;
+    document.querySelectorAll('.glass-input')[1].placeholder = translations[lang].inputEmail;
+    document.querySelectorAll('.glass-input')[2].placeholder = translations[lang].inputMessage;
+    document.querySelector('.contact-form .btn').textContent = translations[lang].submitBtn;
+
+    // Footer
+    document.querySelector('.footer p').textContent = translations[lang].footerText;
+
+    // Update HTML lang attribute
+    document.documentElement.lang = lang;
+}
+
 // Language switcher
 document.addEventListener('DOMContentLoaded', () => {
     const langButtons = document.querySelectorAll('.lang-btn');
@@ -10,22 +156,22 @@ document.addEventListener('DOMContentLoaded', () => {
             langButtons.forEach(b => b.classList.remove('active'));
             this.classList.add('active');
             
-            // Update HTML lang attribute
-            document.documentElement.lang = lang;
+            // Switch language
+            switchLanguage(lang);
             
             // Store preference
             localStorage.setItem('preferred-lang', lang);
-            
-            // Reload page to switch language (for full implementation)
-            // For now, just visual feedback via class toggle
         });
     });
     
-    // Restore user preference
+    // Restore user preference and apply language
     const savedLang = localStorage.getItem('preferred-lang') || 'ru';
     const savedBtn = document.querySelector(`.lang-btn[data-lang="${savedLang}"]`);
     if (savedBtn) {
         savedBtn.classList.add('active');
+        switchLanguage(savedLang);
+    } else {
+        switchLanguage('ru');
     }
 
     // Hamburger menu
