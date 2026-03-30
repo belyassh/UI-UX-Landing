@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Designer Portfolio</title>
+    <title>Портфолио веб-дизайнера</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Merriweather:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Animated Background -->
@@ -24,11 +24,15 @@
                 <span class="logo-hitachi">hitachi</span><span class="logo-ux">ux</span>
             </div>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#about">Обо мне</a></li>
+                <li><a href="#portfolio">Проекты</a></li>
+                <li><a href="#contact">Контакты</a></li>
             </ul>
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="ru">РУ</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
         </div>
     </nav>
 
@@ -37,13 +41,13 @@
         <div class="hero-content">
             <div class="glass-card hero-card">
                 <h1 class="hero-title">
-                    <span class="title-line">Creative</span>
-                    <span class="title-line">Web Designer</span>
+                    <span class="title-line">Чистый</span>
+                    <span class="title-line">Веб-дизайн</span>
                 </h1>
-                <p class="hero-subtitle">Crafting beautiful digital experiences with modern design & smooth animations</p>
+                <p class="hero-subtitle">Проектирую визуально точные интерфейсы: современный стиль, логичная структура и аккуратные анимации.</p>
                 <div class="hero-buttons">
-                    <a href="#portfolio" class="btn btn-primary">View Work</a>
-                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    <a href="#portfolio" class="btn btn-primary">Смотреть проекты</a>
+                    <a href="#contact" class="btn btn-secondary">Обсудить задачу</a>
                 </div>
             </div>
         </div>
@@ -56,32 +60,32 @@
     <section id="about" class="about">
         <div class="container">
             <div class="glass-card about-card">
-                <h2 class="section-title">About Me</h2>
+                <h2 class="section-title">Обо мне</h2>
                 <div class="about-content">
                     <div class="about-text">
-                        <p>I'm a passionate web designer specializing in creating stunning, user-friendly interfaces that blend aesthetics with functionality. With a keen eye for detail and a love for modern design trends, I transform ideas into beautiful digital experiences.</p>
-                        <p>My approach combines clean design principles, smooth animations, and cutting-edge web technologies to deliver websites that not only look great but perform exceptionally.</p>
+                        <p>Я веб-дизайнер, который фокусируется на чистом визуальном языке, удобстве и понятной структуре интерфейсов. Для меня важны детали: типографика, ритм отступов, читаемость и последовательность компонентов.</p>
+                        <p>В работе совмещаю дизайн и фронтенд-реализацию, чтобы итоговый сайт выглядел целостно, работал быстро и одинаково хорошо на мобильных устройствах и десктопе.</p>
                     </div>
                     <div class="skills-grid">
                         <div class="skill-item glass-card-small">
-                            <div class="skill-icon">🎨</div>
-                            <h3>UI/UX Design</h3>
-                            <p>User-centered design thinking</p>
+                            <div class="skill-badge design"></div>
+                            <h3>UI/UX Дизайн</h3>
+                            <p>Интерфейсы, ориентированные на пользователя</p>
                         </div>
                         <div class="skill-item glass-card-small">
-                            <div class="skill-icon">💻</div>
-                            <h3>Frontend Dev</h3>
-                            <p>Modern web technologies</p>
+                            <div class="skill-badge code"></div>
+                            <h3>Frontend</h3>
+                            <p>Современная HTML/CSS/JS верстка</p>
                         </div>
                         <div class="skill-item glass-card-small">
-                            <div class="skill-icon">✨</div>
-                            <h3>Animations</h3>
-                            <p>Smooth, engaging interactions</p>
+                            <div class="skill-badge animation"></div>
+                            <h3>Анимации</h3>
+                            <p>Плавные и уместные микровзаимодействия</p>
                         </div>
                         <div class="skill-item glass-card-small">
-                            <div class="skill-icon">📱</div>
-                            <h3>Responsive</h3>
-                            <p>Mobile-first approach</p>
+                            <div class="skill-badge responsive"></div>
+                            <h3>Адаптивность</h3>
+                            <p>Корректная работа на всех экранах</p>
                         </div>
                     </div>
                 </div>
@@ -92,41 +96,41 @@
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio">
         <div class="container">
-            <h2 class="section-title">Featured Work</h2>
+            <h2 class="section-title">Избранные проекты</h2>
             <div class="portfolio-grid">
                 <div class="portfolio-item glass-card">
                     <div class="portfolio-image">
                         <div class="portfolio-overlay">
-                            <h3>E-Commerce Platform</h3>
-                            <p>Modern shopping experience</p>
-                            <a href="#" class="portfolio-link">View Project →</a>
+                            <h3>Платформа e-commerce</h3>
+                            <p>Система управления товарами и заказами</p>
+                            <a href="#" class="portfolio-link">Смотреть проект →</a>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-item glass-card">
                     <div class="portfolio-image">
                         <div class="portfolio-overlay">
-                            <h3>Creative Agency</h3>
-                            <p>Bold & innovative design</p>
-                            <a href="#" class="portfolio-link">View Project →</a>
+                            <h3>Веб-студия</h3>
+                            <p>Сайт с портфолио и услугами</p>
+                            <a href="#" class="portfolio-link">Смотреть проект →</a>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-item glass-card">
                     <div class="portfolio-image">
                         <div class="portfolio-overlay">
-                            <h3>Tech Startup</h3>
-                            <p>Clean & professional</p>
-                            <a href="#" class="portfolio-link">View Project →</a>
+                            <h3>Маркетинговая платформа</h3>
+                            <p>Управление кампаниями и аналитика</p>
+                            <a href="#" class="portfolio-link">Смотреть проект →</a>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-item glass-card">
                     <div class="portfolio-image">
                         <div class="portfolio-overlay">
-                            <h3>Portfolio Website</h3>
-                            <p>Elegant showcase</p>
-                            <a href="#" class="portfolio-link">View Project →</a>
+                            <h3>Приложение для управления</h3>
+                            <p>Система отслеживания проектов и задач</p>
+                            <a href="#" class="portfolio-link">Смотреть проект →</a>
                         </div>
                     </div>
                 </div>
@@ -138,19 +142,19 @@
     <section id="contact" class="contact">
         <div class="container">
             <div class="glass-card contact-card">
-                <h2 class="section-title">Let's Work Together</h2>
-                <p class="contact-subtitle">Have a project in mind? I'd love to hear about it.</p>
+                <h2 class="section-title">Давайте работать вместе</h2>
+                <p class="contact-subtitle">Есть идея проекта? Напишите, обсудим формат и сроки.</p>
                 <form class="contact-form">
                     <div class="form-group">
-                        <input type="text" class="glass-input" placeholder="Your Name" required>
+                        <input type="text" class="glass-input" placeholder="Ваше имя" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" class="glass-input" placeholder="Your Email" required>
+                        <input type="email" class="glass-input" placeholder="Ваш email" required>
                     </div>
                     <div class="form-group">
-                        <textarea class="glass-input" rows="5" placeholder="Your Message" required></textarea>
+                        <textarea class="glass-input" rows="5" placeholder="Коротко опишите задачу" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <button type="submit" class="btn btn-primary">Отправить сообщение</button>
                 </form>
                 <div class="social-links">
                     <a href="#" class="social-link glass-card-small">LinkedIn</a>
@@ -165,7 +169,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Web Designer Portfolio. All rights reserved.</p>
+            <p>&copy; 2026 Портфолио веб-дизайнера. Все права защищены.</p>
         </div>
     </footer>
 

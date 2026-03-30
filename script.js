@@ -1,3 +1,34 @@
+// Language switcher
+document.addEventListener('DOMContentLoaded', () => {
+    const langButtons = document.querySelectorAll('.lang-btn');
+    
+    langButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const lang = this.getAttribute('data-lang');
+            
+            // Update active state
+            langButtons.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            
+            // Update HTML lang attribute
+            document.documentElement.lang = lang;
+            
+            // Store preference
+            localStorage.setItem('preferred-lang', lang);
+            
+            // Reload page to switch language (for full implementation)
+            // For now, just visual feedback via class toggle
+        });
+    });
+    
+    // Restore user preference
+    const savedLang = localStorage.getItem('preferred-lang') || 'ru';
+    const savedBtn = document.querySelector(`.lang-btn[data-lang="${savedLang}"]`);
+    if (savedBtn) {
+        savedBtn.classList.add('active');
+    }
+});
+
 // Smooth scroll behavior for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -78,7 +109,7 @@ if (contactForm) {
         const originalBackground = submitButton.style.background;
         
         // Show loading state
-        submitButton.textContent = 'Sending...';
+        submitButton.textContent = 'Отправка...';
         submitButton.disabled = true;
         submitButton.style.opacity = '0.7';
         
@@ -86,7 +117,7 @@ if (contactForm) {
             // Check if EmailJS is configured
             if (typeof emailjs === 'undefined' || emailjs.init.toString().includes('YOUR_PUBLIC_KEY')) {
                 // Fallback: Show demo message if EmailJS not configured
-                throw new Error('EmailJS not configured. Please set up your EmailJS credentials.');
+                throw new Error('EmailJS не настроен. Добавьте корректные ключи сервиса.');
             }
             
             // Send email using EmailJS
@@ -103,7 +134,7 @@ if (contactForm) {
             );
             
             // Success feedback
-            submitButton.textContent = 'Message Sent! ✓';
+            submitButton.textContent = 'Отправлено! ✓';
             submitButton.style.background = 'linear-gradient(135deg, #10b981, #059669)';
             submitButton.style.opacity = '1';
             
@@ -121,7 +152,7 @@ if (contactForm) {
             console.error('Error sending email:', error);
             
             // Error feedback
-            submitButton.textContent = 'Error - Try Again';
+            submitButton.textContent = 'Ошибка - попробуйте снова';
             submitButton.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
             submitButton.style.opacity = '1';
             submitButton.disabled = false;
@@ -135,10 +166,10 @@ if (contactForm) {
                 contactForm.appendChild(errorMsg);
             }
             
-            if (error.message.includes('not configured')) {
-                errorMsg.textContent = '⚠️ Email service not configured. Please contact me directly or set up EmailJS.';
+            if (error.message.toLowerCase().includes('не настроен') || error.message.toLowerCase().includes('not configured')) {
+                errorMsg.textContent = 'Сервис отправки не настроен. Свяжитесь со мной напрямую или завершите настройку EmailJS.';
             } else {
-                errorMsg.textContent = '⚠️ Failed to send message. Please try again or contact me directly.';
+                errorMsg.textContent = 'Не удалось отправить сообщение. Попробуйте еще раз или свяжитесь со мной напрямую.';
             }
             
             // Remove error message after 5 seconds
