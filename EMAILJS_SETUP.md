@@ -1,76 +1,56 @@
-# EmailJS Setup Guide
+# Настройка EmailJS
 
-The contact form is now configured to send emails using EmailJS. Follow these steps to set it up:
+Форма в этом проекте сначала пытается отправить заявку через EmailJS.
+Если сервис недоступен или не настроен, скрипт автоматически откроет почтовый клиент через mailto.
 
-## Step 1: Create an EmailJS Account
-1. Go to [https://www.emailjs.com/](https://www.emailjs.com/)
-2. Sign up for a free account (200 emails/month on free tier)
+## 1. Создай аккаунт EmailJS
 
-## Step 2: Create an Email Service
-1. Go to **Email Services** in your dashboard
-2. Click **Add New Service**
-3. Choose your email provider (Gmail, Outlook, etc.)
-4. Follow the setup instructions
-5. Copy your **Service ID** (e.g., `service_xxxxxxx`)
+1. Перейди на https://www.emailjs.com.
+2. Создай аккаунт и подтверди почту.
 
-## Step 3: Create an Email Template
-1. Go to **Email Templates** in your dashboard
-2. Click **Create New Template**
-3. Use this template structure:
+## 2. Добавь Email Service
 
-**Subject:** New Contact Form Message from {{from_name}}
+1. В панели EmailJS открой Email Services.
+2. Создай сервис (Gmail, Outlook и т.д.).
+3. Скопируй Service ID.
 
-**Content:**
-```
-From: {{from_name}}
-Email: {{from_email}}
+## 3. Создай Email Template
 
-Message:
-{{message}}
-```
+1. Открой Email Templates.
+2. Создай новый шаблон.
+3. Используй переменные:
 
-4. Save the template and copy your **Template ID** (e.g., `template_xxxxxxx`)
+- from_name
+- from_email
+- message
+- to_email
 
-## Step 4: Get Your Public Key
-1. Go to **Account** → **General** in your dashboard
-2. Copy your **Public Key** (also called API Key)
+4. Скопируй Template ID.
 
-## Step 5: Update the Code
-Open `script.js` and replace these placeholders:
+## 4. Возьми Public Key
 
-1. Replace `YOUR_PUBLIC_KEY` with your EmailJS Public Key (line ~6)
-2. Replace `YOUR_SERVICE_ID` with your Service ID (line ~30)
-3. Replace `YOUR_TEMPLATE_ID` with your Template ID (line ~31)
-4. Replace `your-email@example.com` with your actual email address (line ~35)
+1. Открой Account -> General.
+2. Скопируй Public Key.
 
-## Example:
-```javascript
-emailjs.init('abc123xyz'); // Your Public Key
+## 5. Обнови конфиг в script.js
 
-await emailjs.send(
-    'service_abc123',    // Your Service ID
-    'template_xyz789',   // Your Template ID
-    {
-        from_name: name,
-        from_email: email,
-        message: message,
-        to_email: 'youremail@gmail.com' // Your email
-    }
-);
+Вверху файла есть объект emailConfig:
+
+```js
+const emailConfig = {
+    publicKey: '...'
+    serviceId: '...'
+    templateId: '...'
+    toEmail: '...'
+};
 ```
 
-## Alternative: Use Formspree (Even Easier)
-If you prefer a simpler setup, you can use Formspree instead:
+Поставь свои значения.
 
-1. Go to [https://formspree.io/](https://formspree.io/)
-2. Sign up and create a new form
-3. Get your form endpoint URL
-4. Update the form in `index.html` to use `action` and `method` attributes instead of JavaScript
+## 6. Проверка
 
-## Testing
-After setup, test the form by:
-1. Filling out all fields
-2. Submitting the form
-3. Checking your email inbox
+1. Запусти проект локально.
+2. Заполни форму в блоке Связаться.
+3. Проверь входящее письмо.
 
-The form will show "Message Sent! ✓" on success, or an error message if something goes wrong.
+Если EmailJS не настроен корректно, откроется письмо в почтовом клиенте с уже заполненными полями.

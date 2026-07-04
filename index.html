@@ -3,202 +3,304 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Портфолио веб-дизайнера</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="hitachiux - сайты под бизнес-задачи: быстрые, адаптивные, с понятной логикой заявок и автоматизацией.">
+    <title>hitachiux | Портфолио веб-разработчика</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- background -->
-    <div class="background">
-        <div class="gradient-orb orb-1"></div>
-        <div class="gradient-orb orb-2"></div>
-        <div class="gradient-orb orb-3"></div>
+    <div class="bg-layer" aria-hidden="true">
+        <div class="orb orb-a"></div>
+        <div class="orb orb-b"></div>
+        <div class="orb orb-c"></div>
     </div>
 
-    <!-- navigation -->
-    <nav class="glass-nav">
-        <div class="nav-container">
-            <div class="logo">
-                <span class="logo-hitachi">hitachi</span><span class="logo-ux">ux</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home">Главная</a></li>
-                <li><a href="#benefits">Преимущества</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#cta">Заявка</a></li>
-            </ul>
-            <button class="hamburger" aria-label="Меню">
+    <header class="topbar">
+        <div class="container nav-wrap">
+            <a class="brand" href="#home" aria-label="На главную">
+                <span class="brand-main">hitachi</span>
+                <span class="brand-accent">ux</span>
+            </a>
+
+            <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobileMenu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
+
+            <nav class="desktop-nav" aria-label="Основная навигация">
+                <a href="#portfolio">Кейсы</a>
+                <a href="#services">Услуги</a>
+                <a href="#process">Процесс</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contact" class="nav-cta">Заявка</a>
+            </nav>
         </div>
-    </nav>
 
-    <!-- Mobile drawer menu -->
-    <div class="drawer-overlay" id="drawerOverlay"></div>
-    <div class="drawer-menu">
-        <button class="drawer-close" aria-label="Закрыть меню">
-            <span></span>
-            <span></span>
-        </button>
-        <ul class="drawer-links">
-            <li><a href="#home">Главная</a></li>
-            <li><a href="#benefits">Преимущества</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="#cta">Заявка</a></li>
-        </ul>
-    </div>
+        <div class="mobile-overlay" id="mobileOverlay"></div>
+        <nav class="mobile-menu" id="mobileMenu" aria-label="Мобильная навигация">
+            <a href="#portfolio">Кейсы</a>
+            <a href="#services">Услуги</a>
+            <a href="#process">Процесс</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Заявка</a>
+        </nav>
+    </header>
 
-    <!-- hero -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="glass-card hero-card">
-                <h1 class="hero-title">
-                    <span class="title-line">Чистый</span>
-                    <span class="title-line">Веб-дизайн</span>
-                </h1>
-                <p class="hero-subtitle">Проектирую визуально точные интерфейсы: современный стиль, логичная структура и аккуратные анимации.</p>
-                <div class="hero-buttons">
-                    <a href="#cta" class="btn btn-primary">Оставить заявку</a>
-                    <a href="#benefits" class="btn btn-secondary">Узнать больше</a>
+    <main>
+        <section class="hero" id="home">
+            <div class="container hero-grid">
+                <div class="hero-copy reveal">
+                    <p class="eyebrow">Сайты, которые работают на продажи</p>
+                    <h1>Разрабатываю коммерческие сайты для бизнеса</h1>
+                    <p class="lead">Опираюсь на опыт в техподдержке, продажах и финтехе. Делаю не просто дизайн, а понятный путь клиента: от первого касания до заявки в Telegram или WhatsApp.</p>
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn btn-primary">Обсудить проект</a>
+                        <a href="#portfolio" class="btn btn-ghost">Посмотреть кейсы</a>
+                    </div>
+                </div>
+                <div class="hero-stats reveal">
+                    <article class="stat-card">
+                        <p class="stat-value">6+</p>
+                        <p class="stat-label">реальных кейсов в портфолио</p>
+                    </article>
+                    <article class="stat-card">
+                        <p class="stat-value">5-7 дней</p>
+                        <p class="stat-label">на запуск лендинга</p>
+                    </article>
+                    <article class="stat-card">
+                        <p class="stat-value">14 дней</p>
+                        <p class="stat-label">поддержка после релиза</p>
+                    </article>
                 </div>
             </div>
-        </div>
-        <div class="scroll-indicator">
-            <div class="mouse"></div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Benefits Section -->
-    <section id="benefits" class="benefits">
-        <div class="container">
-            <h2 class="section-title benefits-title">Почему выбирают мою работу</h2>
-            <div class="benefits-grid">
-                <div class="benefit-card glass-card">
-                    <div class="benefit-icon"></div>
-                    <h3>UI/UX Дизайн</h3>
-                    <p>Интерфейсы, ориентированные на пользователя, с фокусом на удобство и эстетику</p>
+        <section class="portfolio" id="portfolio">
+            <div class="container">
+                <div class="section-head reveal">
+                    <p class="eyebrow">Портфолио</p>
+                    <h2>Проекты из разных ниш</h2>
                 </div>
-                <div class="benefit-card glass-card">
-                    <div class="benefit-icon"></div>
-                    <h3>Чистая верстка</h3>
-                    <p>Современная HTML/CSS/JS реализация, оптимизированная под все браузеры</p>
-                </div>
-                <div class="benefit-card glass-card">
-                    <div class="benefit-icon"></div>
-                    <h3>Гладкие анимации</h3>
-                    <p>Плавные и уместные микровзаимодействия, которые улучшают UX</p>
-                </div>
-                <div class="benefit-card glass-card">
-                    <div class="benefit-icon"></div>
-                    <h3>Адаптивный дизайн</h3>
-                    <p>Корректная работа на всех экранах — от мобильных до десктопов</p>
+
+                <div class="portfolio-grid">
+                    <article class="case-card reveal">
+                        <img src="belyassh.github.io_KrovMart_(Nest Hub Max) (1).png" alt="Кейс KrovMart" loading="lazy">
+                        <div class="case-body">
+                            <h3>KrovMart</h3>
+                            <p>Строительство · Калькулятор · Лиды</p>
+                            <a class="link-btn" href="https://belyassh.github.io/KrovMart/" target="_blank" rel="noopener noreferrer">Открыть сайт</a>
+                        </div>
+                    </article>
+
+                    <article class="case-card reveal">
+                        <img src="belyassh.github.io_ConcertOne_(Nest Hub Max) (1).png" alt="Кейс ConcertOne" loading="lazy">
+                        <div class="case-body">
+                            <h3>ConcertOne</h3>
+                            <p>Event · Лендинг · Адаптив</p>
+                            <a class="link-btn" href="https://belyassh.github.io/ConcertOne/" target="_blank" rel="noopener noreferrer">Открыть сайт</a>
+                        </div>
+                    </article>
+
+                    <article class="case-card reveal">
+                        <img src="nikophuket.com_(Nest Hub Max) (2).png" alt="Кейс Niko Phuket" loading="lazy">
+                        <div class="case-body">
+                            <h3>Niko Phuket</h3>
+                            <p>Туризм · Каталог · Бронирование</p>
+                            <a class="link-btn" href="https://nikophuket.com" target="_blank" rel="noopener noreferrer">Открыть сайт</a>
+                        </div>
+                    </article>
+
+                    <article class="case-card reveal">
+                        <img src="belyassh.github.io_FitnessGirl_(Nest Hub Max).png" alt="Кейс Fitness Girl" loading="lazy">
+                        <div class="case-body">
+                            <h3>Fitness Girl</h3>
+                            <p>Фитнес · Лендинг · Тарифы</p>
+                            <a class="link-btn" href="https://belyassh.github.io/FitnessGirl/" target="_blank" rel="noopener noreferrer">Открыть сайт</a>
+                        </div>
+                    </article>
+
+                    <article class="case-card reveal">
+                        <img src="belyassh.github.io_PrestigeMotors_(Nest Hub Max) (1).png" alt="Кейс Prestige Motors" loading="lazy">
+                        <div class="case-body">
+                            <h3>Prestige Motors</h3>
+                            <p>Авто/мото · Каталог · UI</p>
+                            <a class="link-btn" href="https://belyassh.github.io/PrestigeMotors/" target="_blank" rel="noopener noreferrer">Открыть сайт</a>
+                        </div>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- FAQ Section -->
-    <section id="faq" class="faq">
-        <div class="container">
-            <h2 class="section-title">Часто задаваемые вопросы</h2>
-            <div class="faq-container">
-                <div class="faq-item glass-card">
-                    <button class="faq-header">
-                        <h3>Как долго обычно занимает проект?</h3>
-                        <span class="faq-toggle">+</span>
-                    </button>
-                    <div class="faq-content">
-                        <p>Сроки зависят от сложности задачи. Простой сайт — 2-3 недели, сложный проект — 4-8 недель. На первой встрече мы обсудим детали и согласуем точные сроки.</p>
-                    </div>
+        <section class="services" id="services">
+            <div class="container">
+                <div class="section-head reveal">
+                    <p class="eyebrow">Пакеты</p>
+                    <h2>Услуги под задачи бизнеса</h2>
                 </div>
 
-                <div class="faq-item glass-card">
-                    <button class="faq-header">
-                        <h3>Какие технологии вы используете?</h3>
-                        <span class="faq-toggle">+</span>
-                    </button>
-                    <div class="faq-content">
-                        <p>Я работаю с современным стеком: HTML5, CSS3, JavaScript, Vue.js/React. Для дизайна использую Figma. Все проекты оптимизированы под производительность и SEO.</p>
-                    </div>
+                <div class="services-grid">
+                    <article class="service-card reveal">
+                        <h3>Лендинг Старт</h3>
+                        <p class="price">от 90 000 ₸</p>
+                        <ul>
+                            <li>1 страница под конкретную услугу</li>
+                            <li>Адаптив и базовое SEO</li>
+                            <li>Форма заявок и кнопки мессенджеров</li>
+                        </ul>
+                    </article>
+
+                    <article class="service-card reveal highlighted">
+                        <h3>Бизнес Сайт</h3>
+                        <p class="price">от 170 000 ₸</p>
+                        <ul>
+                            <li>До 5 страниц или мини-каталог</li>
+                            <li>Калькулятор или фильтрация</li>
+                            <li>Интеграция с CRM или Telegram</li>
+                        </ul>
+                    </article>
+
+                    <article class="service-card reveal">
+                        <h3>Автоматизация</h3>
+                        <p class="price">от 300 000 ₸</p>
+                        <ul>
+                            <li>Сложная логика заявок и сценарии</li>
+                            <li>Подключение внешних сервисов</li>
+                            <li>Оптимизация процессов команды</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="process" id="process">
+            <div class="container">
+                <div class="section-head reveal">
+                    <p class="eyebrow">Как работаем</p>
+                    <h2>Прозрачный процесс без затягивания</h2>
                 </div>
 
-                <div class="faq-item glass-card">
-                    <button class="faq-header">
-                        <h3>Предоставляете ли вы поддержку после запуска?</h3>
-                        <span class="faq-toggle">+</span>
-                    </button>
-                    <div class="faq-content">
-                        <p>Да, я предлагаю пакеты поддержки. После запуска даю 2 недели бесплатной правки. Затем возможна поддержка на условиях, которые мы обсудим заранее.</p>
-                    </div>
+                <div class="timeline">
+                    <article class="timeline-item reveal">
+                        <span>1</span>
+                        <div>
+                            <h3>Бриф и цели</h3>
+                            <p>Фиксируем задачу, целевую аудиторию и главный сценарий заявки.</p>
+                        </div>
+                    </article>
+                    <article class="timeline-item reveal">
+                        <span>2</span>
+                        <div>
+                            <h3>Прототип и дизайн</h3>
+                            <p>Собираю структуру экрана и визуальную концепцию под нишу.</p>
+                        </div>
+                    </article>
+                    <article class="timeline-item reveal">
+                        <span>3</span>
+                        <div>
+                            <h3>Верстка и логика</h3>
+                            <p>Адаптивная реализация, анимации и формы для реальных лидов.</p>
+                        </div>
+                    </article>
+                    <article class="timeline-item reveal">
+                        <span>4</span>
+                        <div>
+                            <h3>Запуск и поддержка</h3>
+                            <p>Публикация, базовые метрики, 14 дней на улучшения после старта.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq" id="faq">
+            <div class="container narrow">
+                <div class="section-head reveal">
+                    <p class="eyebrow">FAQ</p>
+                    <h2>Частые вопросы</h2>
                 </div>
 
-                <div class="faq-item glass-card">
-                    <button class="faq-header">
-                        <h3>Во сколько обойдется проект?</h3>
-                        <span class="faq-toggle">+</span>
-                    </button>
-                    <div class="faq-content">
-                        <p>Стоимость зависит от объема работы. Минимальная цена за проект — $1500. Для точной оценки нужно обсудить требования. Предлагаю бесплатную консультацию.</p>
-                    </div>
-                </div>
+                <div class="faq-list">
+                    <article class="faq-item reveal">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            Сколько длится проект?
+                            <span>+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Лендинг обычно запускается за 5-7 дней. Более сложные сайты занимают 2-4 недели в зависимости от объема.</p>
+                        </div>
+                    </article>
 
-                <div class="faq-item glass-card">
-                    <button class="faq-header">
-                        <h3>Как организован процесс работы?</h3>
-                        <span class="faq-toggle">+</span>
-                    </button>
-                    <div class="faq-content">
-                        <p>Процесс: 1. Консультация — обсуждение целей. 2. Дизайн — прототипы в Figma. 3. Разработка — верстка и программирование. 4. Тестирование и правки. 5. Запуск и поддержка.</p>
-                    </div>
-                </div>
+                    <article class="faq-item reveal">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            Что нужно от меня на старте?
+                            <span>+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Краткое описание услуги, ориентиры по примерам и контакты для приема заявок. Остальную структуру помогу собрать.</p>
+                        </div>
+                    </article>
 
-                <div class="faq-item glass-card">
-                    <button class="faq-header">
-                        <h3>Жду ответа. Как быстро вы отвечаете?</h3>
-                        <span class="faq-toggle">+</span>
-                    </button>
-                    <div class="faq-content">
-                        <p>Я отвечаю на письма в течение 24 часов в рабочие дни. Сложные вопросы обсуждаю на первой встрече. Прошу быть терпеливым — качество работы для меня важнее скорости ответа.</p>
+                    <article class="faq-item reveal">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            Можно ли доработать уже готовый сайт?
+                            <span>+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Да. Беру на доработку текущие сайты: ускорение, редизайн ключевых блоков, улучшение формы заявок и логики конверсии.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="contact-card reveal">
+                    <div>
+                        <p class="eyebrow">Связаться</p>
+                        <h2>Обсудим проект и оценим сроки</h2>
+                        <p class="lead">Оставь заявку. Если EmailJS не настроен в окружении, форма безопасно откроет письмо в почтовом клиенте.</p>
+                    </div>
+
+                    <form class="contact-form" novalidate>
+                        <label>
+                            Имя
+                            <input class="glass-input" type="text" name="name" autocomplete="name" required>
+                        </label>
+                        <label>
+                            Email
+                            <input class="glass-input" type="email" name="email" autocomplete="email" required>
+                        </label>
+                        <label>
+                            Сообщение
+                            <textarea class="glass-input" name="message" rows="5" required></textarea>
+                        </label>
+                        <input type="text" name="company" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+                        <button class="btn btn-primary" type="submit">Отправить заявку</button>
+                        <p class="form-status" role="status" aria-live="polite"></p>
+                    </form>
+
+                    <div class="social-row">
+                        <a href="https://instagram.com/hitachiux" target="_blank" rel="noopener noreferrer">Instagram</a>
+                        <a href="mailto:nikitahill099@gmail.com">Email</a>
+                        <a href="https://github.com/belyassh" target="_blank" rel="noopener noreferrer">GitHub</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- CTA Section -->
-    <section id="cta" class="cta">
-        <div class="container">
-            <div class="glass-card cta-card">
-                <h2 class="section-title">Готовы начать проект?</h2>
-                <p class="cta-subtitle">Заполните простую форму, и я свяжусь с вами в течение 24 часов</p>
-                <form class="contact-form">
-                    <div class="form-group">
-                        <input type="text" class="glass-input" placeholder="Ваше имя" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" class="glass-input" placeholder="Ваш email" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea class="glass-input" rows="5" placeholder="Коротко опишите вашу идею проекта" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Отправить заявку</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Портфолио веб-дизайнера. Все права защищены.</p>
+        <div class="container footer-inner">
+            <p>hitachiux · веб-разработка и UI/UX</p>
+            <p>© <span id="year"></span> Все права защищены</p>
         </div>
     </footer>
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
